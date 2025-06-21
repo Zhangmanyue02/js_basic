@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    /* 数组创建方式一 */
+    var arr1 = new Array()
+    console.log(arr1); // []
+    /* 数组创建方式二 */
+    var arr2 = new Array(5)
+    console.log(arr2); // [empty × 5]
+    /* 数组创建方式三 */
+    var arr3 = new Array(5, 6, 7)
+    console.log(arr3); // [5, 6, 7]
+    /* 数组创建方式四 */
+    var arr4 = Array.of(5, 6, 7)
+    console.log(arr4); // [5, 6, 7]
+    /* 数组创建方式五 */
+    var arr5 = Array.from("hello")
+    console.log(arr5); // ["h", "e", "l", "l", "o"] 
+    /* 数组创建方式六 */
+    var arr6 = Array.from({
+        0: "a",
+        1: "b",
+        2: "c",
+        length: 3
+    })
+    console.log(arr6); // ["a", "b", "c"]
+    /* 数组创建方式七 */
+    var arr7 = []
+    console.log(arr7); // []
+</script>
+
+</html>

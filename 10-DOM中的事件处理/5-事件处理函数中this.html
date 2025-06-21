@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">main</div>
+</body>
+<script>
+    var mainEl = document.querySelector(".main")
+    // 在 JavaScript 里，函数中的 this 关键字的值取决于函数的调用方式。
+    // 当使用传统的函数表达式作为 addEventListener 的回调时，
+    // this 会指向绑定事件的 DOM 元素。这是因为浏览器在调用这个回调函数时，
+    // 会将 this 设置为触发事件的元素。
+    mainEl.addEventListener("click", function (e) {
+        console.log(this); //this =>> <div class="main">main</div>
+        console.log(this === e.currentTarget); //true
+    })
+
+    // 然而，箭头函数没有自己的 this 绑定。箭头函数中的 this 继承自它的词法作用域，
+    // 也就是箭头函数定义时所在的作用域。在这个例子中，箭头函数定义在全局作用域，
+    // 所以 this 指向全局对象（在浏览器环境中是 window）。
+    mainEl.addEventListener("click", (e) => {
+        console.log(this); //this =>> window
+        console.log(this === e.currentTarget); //false
+    })
+</script>
+
+</html>

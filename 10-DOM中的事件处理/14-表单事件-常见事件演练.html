@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="">
+        <input type="text" name="username" id="">
+        <input type="password" name="password" id="">
+        <input type="submit" value="提交">
+        <input type="reset" value="重置">
+    </form>
+</body>
+<script>
+    var formEl = document.querySelector("form")
+    formEl.addEventListener("submit", function (e) {
+        e.preventDefault()
+        var username = e.target.username.value
+        var password = e.target.password.value
+        console.log(username, password);
+    })
+    formEl.addEventListener("reset", function (e) {
+        e.preventDefault()
+        console.log("重置了");
+    })
+</script>
+
+</html>

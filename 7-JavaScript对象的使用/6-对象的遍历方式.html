@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var info = {
+        name: "why",
+        age: 18,
+        sex: "男"
+    }
+    // 1.对象的遍历方式一
+    for (let key in info) {
+        console.log(key)
+    }
+    console.log("--------------")
+    // 2.对象的遍历方式二
+    for (let key of Object.keys(info)) {
+        console.log(key)
+    }
+    console.log("--------------")
+    // 3.对象的遍历方式三
+    for (let value of Object.values(info)) {
+        console.log(value)
+    }
+    console.log("--------------")
+    // 4.对象的遍历方式四
+    for (let key of Object.keys(info)) {
+        console.log(key, info[key])
+    }
+    console.log("--------------")
+    // 5.对象的遍历方式五
+    for (let [key, value] of Object.entries(info)) {
+        console.log(key, value)
+    }
+</script>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // to boolean
+
+    // 1.显式转换:Boolean函数
+    console.log(Boolean("99999"));// true
+
+    // 2.特殊规则！！！
+    console.log("特殊规则-undefined：", Boolean(undefined));// false
+    console.log("特殊规则-null：", Boolean(null));// false
+    console.log("特殊规则-true：", Boolean(true));// true
+    console.log("特殊规则-false：", Boolean(false));// false
+    console.log("特殊规则-\'\'：", Boolean('')); // false 空值 
+    console.log("特殊规则-'0'：", Boolean('0')); // false 空值 
+    console.log("特殊规则-'NaN'：", Boolean(NaN)); // false 空值 
+</script>
+
+</html>

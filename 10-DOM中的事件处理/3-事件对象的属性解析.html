@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+        }
+
+        .child {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="child"></div>
+    </div>
+</body>
+<script>
+    // 事件对象的属性解析
+    var childEl = document.querySelector(".child")
+    childEl.addEventListener("click", function (e) {
+        // 事件对象
+        console.log(e);
+        // 事件类型
+        console.log(e.type);
+        // 事件目标
+        console.log("事件目标:", e.target);
+        // 事件当前目标
+        console.log("事件当前目标:", e.currentTarget);
+        // 事件冒泡
+        console.log("事件冒泡:", e.bubbles);
+        // 事件捕获
+        console.log("事件捕获:", e.cancelable);
+    })
+</script>
+
+</html>

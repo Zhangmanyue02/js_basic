@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // to number
+    // 1.隐式转换
+    var num1 = "10"
+    var num2 = "2"
+    var res = num1 / num2
+    console.log(typeof res);
+
+    // 2.显式转换:Number函数
+    console.log(Number("99999"));
+
+    // 3.特殊规则！！！
+    console.log("特殊规则-undefined：", Number(undefined));
+    console.log("特殊规则-null：", Number(null));
+    console.log("特殊规则-true：", Number(true));
+    console.log("特殊规则-false：", Number(false));
+</script>
+
+</html>

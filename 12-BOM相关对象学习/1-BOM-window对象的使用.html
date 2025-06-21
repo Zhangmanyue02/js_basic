@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">box</div>
+</body>
+<script>
+    // window对象的基本使用
+    console.log(window === globalThis);
+
+    var boxEl = document.querySelector(".box")
+    boxEl.addEventListener("click", function () {
+        window.open("../README.md", "_blank")
+    })
+
+    window.addEventListener("focus", () => {
+        console.log("浏览器窗口获得了焦点");
+    })
+    window.addEventListener("blur", () => {
+        console.log("浏览器窗口失去了焦点");
+    })
+</script>
+
+</html>

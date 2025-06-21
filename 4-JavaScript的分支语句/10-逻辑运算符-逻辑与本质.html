@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 逻辑与（&&）本质是短路求值运算符，以下是对其本质的演示代码
+    // 当第一个操作数为假值时，逻辑与不会计算第二个操作数，直接返回第一个操作数
+    let result1 = false && console.log('这不会被执行');
+    console.log(result1); // 输出 false
+
+    // 当第一个操作数为真值时，逻辑与返回第二个操作数的值
+    let result2 = true && '第二个操作数的值';
+    console.log(result2); // 输出 '第二个操作数的值'
+</script>
+
+</html>

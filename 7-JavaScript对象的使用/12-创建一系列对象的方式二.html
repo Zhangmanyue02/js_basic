@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // es5中的类
+    function Student(name, age) {
+        this.name = name
+        this.age = age
+        this.running = function () {
+            console.log(this.name + "在跑步")
+        }
+        this.studying = function () {
+            console.log(this.name + "在学习")
+        }
+    }
+
+    var stu1 = new Student("张三", 18)
+    var stu2 = new Student("李四", 19)
+    var stu3 = new Student("王五", 20)
+
+    stu1.running()
+    console.log(stu1 instanceof Student); // true
+    console.log(stu1.constructor);
+    console.log(stu1.__proto__ === Student.prototype); // true
+
+    // new 一个普通函数会发生什么？
+    // 1. 创建一个新的对象
+    // 2. 把 this 指向新对象（新对象的 __proto__ 指向构造函数的 prototype）
+    // 3. 执行函数体
+    // 4. 返回新对象
+</script>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+        }
+
+        .child {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="child"></div>
+    </div>
+</body>
+<script>
+    // 事件冒泡：事件从具体的元素向不具体的元素传播（从里往外）
+    // 事件捕获：事件从不具体的元素向具体的元素传播（往外里）
+    // 事件冒泡和事件捕获的区别：
+    // 1. 事件冒泡是从具体的元素向不具体的元素传播（从里往外）
+    // 2. 事件捕获是从不具体的元素向具体的元素传播（往外里）
+    // 3. 事件冒泡和事件捕获的顺序不一样
+    var mainEl = document.querySelector(".main")
+    var childEl = document.querySelector(".child")
+    var bodyEl = document.querySelector("body")
+
+    bodyEl.addEventListener("click", function () {
+        console.log("3-冒泡-body");
+    })
+    mainEl.addEventListener("click", function () {
+        console.log("2-冒泡-main");
+    })
+    childEl.addEventListener("click", function () {
+        console.log("1-冒泡-child");
+    })
+
+    bodyEl.addEventListener("click", function () {
+        console.log("1-捕获-body");
+    }, true)
+    mainEl.addEventListener("click", function () {
+        console.log("2-捕获-main");
+    }, true)
+    childEl.addEventListener("click", function () {
+        console.log("3-捕获-child");
+    }, true)
+</script>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script>
+    // 原代码未打印是因为先触发了事件，后添加了事件监听器。
+    // 事件触发时还没有监听器来处理该事件，所以不会打印。
+    // 调整顺序，先添加事件监听器，再触发事件。
+    window.addEventListener("zmy", function () {
+        console.log("zmy事件触发了");
+    })
+    window.dispatchEvent(new Event("zmy"))
+</script>
+
+</html>

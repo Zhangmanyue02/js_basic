@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 逻辑或（||）本质：只要其中一个操作数为真，结果就为真；只有当所有操作数都为假时，结果才为假。
+    // 以下是逻辑或本质的示例代码
+    let result1 = false || true;
+    console.log(result1); // 输出: true
+
+    let result2 = false || false;
+    console.log(result2); // 输出: false
+
+    let result3 = true || false;
+    console.log(result3); // 输出: true
+
+    let result4 = true || true;
+    console.log(result4); // 输出: true
+
+    // 逻辑或还具有短路特性，即如果第一个操作数为真，就不会再计算第二个操作数
+    let num1 = 10;
+    let num2 = 20;
+    let shortCircuitResult = true || (num1 = 30);
+    console.log(num1); // 输出: 10，因为短路，num1的值没有被修改
+</script>
+
+</html>

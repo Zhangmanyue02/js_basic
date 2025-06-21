@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    /* 常用高阶函数总结 */
+    // 1.forEach()
+    // 1.forEach(params)：forEach() 方法用于遍历数组，对数组的每个元素执行一次提供的函数。
+    var arr = [1, 2, 3, 4, 5, 6]
+    arr.forEach((item, index, arr) => {
+        console.log(item, index, arr);
+    })
+    // 2.map()
+    // 2.map(params)：map() 方法创建一个新数组，这个新数组由原数组中的每个元素都调用一次提供的函数后的返回值组成。
+    var arr2 = arr.map((item, index, arr) => {
+        return item * 2
+    })
+    console.log(arr2); // [2, 4, 6, 8, 10, 12]
+    // 3.filter()
+    // 3.filter(params)：filter() 方法创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。
+    var arr3 = arr.filter((item, index, arr) => {
+        return item % 2 === 0
+    })
+    console.log(arr3); // [2, 4, 6]
+    // 4.reduce()
+    // 4.reduce(params)：reduce() 方法对数组中的每个元素执行一个由您提供的reducer函数(升序执行)，将其结果汇总为单个返回值。
+    var arr4 = arr.reduce((pre, cur, index, arr) => {
+        return pre + cur
+    })
+    console.log(arr4); // 21
+    // 5.some()
+    // 5.some(params)：some() 方法测试数组中是否至少有一个元素通过了由提供的函数测试。它返回的是一个布尔值。
+    var arr5 = arr.some((item, index, arr) => {
+        return item > 5
+    })
+    console.log(arr5); // true
+    // 6.every()
+    // 6.every(params)：every() 方法测试一个数组内的所有元素是否都能通过某个指定函数的测试。它返回的是一个布尔值。
+    var arr6 = arr.every((item, index, arr) => {
+        return item > 5
+    })
+    console.log(arr6); // false
+    // 7.find()
+    // 7.find(params)：find() 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined。
+    var arr7 = arr.find((item, index, arr) => {
+        return item > 5
+    })
+    console.log(arr7); // 6
+    // 8.findIndex()
+    // 8.findIndex(params)：findIndex() 方法返回数组中满足提供的测试函数的第一个元素的索引。若没有找到对应元素则返回 -1。
+    var arr8 = arr.findIndex((item, index, arr) => {
+        return item > 5
+    })
+    console.log(arr8); // 5
+    // 9.sort()
+    // 9.sort(params)：sort() 方法用原地算法对数组的元素进行排序，并返回数组。默认排序顺序是在将元素转换为字符串，然后比较它们的UTF-16代码单元值序列时构建的
+    var arr9 = arr.sort((a, b) => {
+        return a - b
+    })
+    console.log(arr9); // [1, 2, 3, 4, 5, 6]
+    // 10.reverse()
+    // 10.reverse()：reverse() 方法将数组中元素的位置颠倒,并返回该数组。数组的第一个元素会变成最后一个，数组的最后一个元素会变成第一个。
+    var arr10 = arr.reverse()
+</script>
+
+</html>

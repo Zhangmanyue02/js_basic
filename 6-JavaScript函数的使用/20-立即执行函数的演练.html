@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 模块化初见端倪
+    (function () {
+        console.log("立即执行函数执行")
+    }())
+
+    var info = (function () {
+        var _name = "why"
+        var _age = 19
+
+        function getName() {
+            return _name
+        }
+        function setName(name) {
+            _name = name
+            return _name
+        }
+        return { getName, setName }
+    })()
+    console.log(info)
+    console.log(info.getName())
+    console.log(info.setName("zmy"))
+</script>
+
+</html>
